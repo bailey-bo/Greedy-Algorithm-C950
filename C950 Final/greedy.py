@@ -158,7 +158,8 @@ def greedyAlgorithm(g, start_vertex):
                             v.address = "410 S State St"
 
         # This for loop allows packages that need to be delivered by a certain deadline to have priority first, and then
-        # trucks that need to be delivered on truck 2 can be added to the priority queue.
+        # trucks that need to be delivered on truck 2 can be added to the priority queue. Once priorityEmpty = True and 
+        # all priority packages are delivered from truck two, these will be added. 
         if priorityEmpty == True and truck2 == True:
             for v in unvisited_queue:
                 if v.special == "truck 2":
